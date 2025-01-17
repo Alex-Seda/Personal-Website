@@ -17,3 +17,26 @@ body{
   padding: 30px 40px;
 }
 
+
+
+.bio-profile-picture{
+  display:block;
+  object-fit: cover;
+  object-position:100% 0%;
+  border-radius: 400px;
+  max-height:80px;
+  width:80px;
+}
+
+.bio-name{
+  color: rgb(226, 226, 226);
+  font-size: 25px;
+  font-weight:500;
+}
+
+.bio-content{
+  font-size: 15px;
+  line-height:22px;
+  color:rgb(173, 173, 173);
+}
+
