@@ -26,6 +26,7 @@ body{
   border-radius: 400px;
   max-height:80px;
   width:80px;
+  margin-bottom:10px;
 }
 
 .block-title{
