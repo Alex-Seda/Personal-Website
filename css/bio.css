@@ -1,0 +1,19 @@
+.bio{
+  height: 1000px;
+}
+
+.bio-profile-picture{
+  display:block;
+  object-fit: cover;
+  object-position:100% 0%;
+  border-radius: 400px;
+  max-height:80px;
+  width:80px;
+  transform: scale(1);
+}
+
+.bio-name{
+  padding: 10px;
+  padding-top: 0px;
+  color: white;
+}

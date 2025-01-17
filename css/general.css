@@ -13,15 +13,6 @@ body{
   display: flex;
   flex-direction: column;
   width:500px;
-  height: 1000px;
   border-radius:20px;
 }
 
-.bio-profile-picture{
-  display:block;
-  object-fit: cover;
-  object-position:100% 0%;
-  height: 80px;
-  width: 80px;
-  border-radius: 400px;
-}
