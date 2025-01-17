@@ -28,13 +28,13 @@ body{
   width:80px;
 }
 
-.bio-name{
-  color: rgb(226, 226, 226);
+.block-title{
+  color: rgb(226,226,226);
   font-size: 25px;
   font-weight:500;
 }
 
-.bio-content{
+.block-content{
   font-size: 15px;
   line-height:22px;
   color:rgb(173, 173, 173);
