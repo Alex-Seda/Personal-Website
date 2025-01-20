@@ -1,3 +1,4 @@
+/* General page */
 body{
   font-family: Arial;
   background-color: rgb(35, 35, 53);
@@ -15,10 +16,11 @@ body{
   width:400px;
   border-radius:20px;
   padding: 30px 40px;
+  margin-bottom: 40px;
 }
 
 
-
+/* Profile picture */
 .bio-profile-picture{
   display:block;
   object-fit: cover;
@@ -29,6 +31,8 @@ body{
   margin-bottom:10px;
 }
 
+
+/* Container contents */  
 .block-title{
   color: rgb(226,226,226);
   font-size: 25px;
@@ -39,5 +43,22 @@ body{
   font-size: 15px;
   line-height:22px;
   color:rgb(173, 173, 173);
+  
 }
 
+.project-grid{
+  margin-top:30px;
+  display:grid;
+  row-gap: 10px;
+}
+
+.project-grid-row{
+  display:flex;
+  justify-content: space-between;
+}
+
+.project-link{
+  color: rgb(173, 173, 173);
+  text-decoration: none;
+  text-decoration: underline;
+}
