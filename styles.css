@@ -63,5 +63,11 @@ body{
 }
 
 .connect-link-row{
-  
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.connect-icon{
+  height: 22px;
 }
