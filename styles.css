@@ -67,7 +67,14 @@ body{
   display: flex;
   flex-direction: row;
   gap: 20px;
+  height: 30px;
 }
 .connect-icon{
   height: 22px;
+  opacity: 0.7;
+  transition: 0.05s;
+}
+.connect-icon:hover{
+  opacity:1;
+  height:26px;
 }
