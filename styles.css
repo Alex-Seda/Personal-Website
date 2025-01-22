@@ -71,6 +71,24 @@ body{
   color:rgb(229, 229, 229);
 }
 
+.language-list{
+  display: flex;
+  flex-direction: row;
+  gap:3px;
+}
+.language-html{
+  color: rgb(253, 132, 132);
+}
+.language-css{
+  color:rgb(111, 159, 255);
+}
+.language-javaScript{
+  color:rgb(255, 165, 117);
+}
+.language-java{
+  color: rgb(252, 220, 133);
+}
+
 
 
 /* Connect block */
