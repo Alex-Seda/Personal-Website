@@ -34,7 +34,7 @@ body{
 }
 
 
-/* Container contents */  
+/* General container contents */  
 .block-title{
   color: rgb(226,226,226);
   font-size: 25px;
@@ -47,6 +47,9 @@ body{
   color:rgb(173, 173, 173);
 }
 
+
+
+/* Project block */
 .project-grid{
   margin-top:30px;
   display:grid;
@@ -68,12 +71,20 @@ body{
   color:rgb(229, 229, 229);
 }
 
+
+
+/* Connect block */
 .connect-link-row{
   margin-top: 20px;
   display: flex;
   flex-direction: row;
   gap: 20px;
   height: 30px;
+}
+.connect-link{
+  width:30px;
+  display:flex;
+  justify-content: center;
 }
 .connect-icon{
   height: 22px;
@@ -82,5 +93,5 @@ body{
 }
 .connect-icon:hover{
   opacity:1;
-  height:26px;
+  height:23px;
 }
