@@ -61,7 +61,8 @@ body{
   justify-content: space-between;
 }
 
-.project-link{
+.project-link,
+.resume-link{
   color: rgb(173, 173, 173);
   text-decoration: none;
   text-decoration: underline;
