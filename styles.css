@@ -60,6 +60,10 @@ body{
   color: rgb(173, 173, 173);
   text-decoration: none;
   text-decoration: underline;
+  transition: 0.05s;
+}
+.project-link:hover{
+  color:rgb(229, 229, 229);
 }
 
 .connect-link-row{
