@@ -123,3 +123,59 @@ strong{
   opacity:1;
   height:23px;
 }
+
+
+
+
+/* === Mobile Responsiveness === */
+@media (max-width: 600px) {
+  body {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .body-container {
+    width: 95%;
+    min-width: unset;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .bio-profile-picture {
+    width: 10rem;
+    height: auto;
+    margin: 0 auto 15px auto;
+    
+  }
+
+  .block-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .block-content {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  .project-grid-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding-bottom: 25px;
+  }
+
+  .connect-link-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .connect-link {
+    width: 25px;
+  }
+
+  .connect-icon {
+    height: 20px;
+  }
+}
