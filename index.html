@@ -201,6 +201,23 @@
       </div>
     </div>
 
+    <!-- Fun fact block -->
+    <div class="body-container">
+      <div class="block-title">
+        Fun code!
+      </div>
+      <p>C is a really cool language! There are many coding conventions that are super weird now, but were vital at the time of its release. That, coupled with C standard library functions and understanding the path of the code to the compiler allows us to generate this very unreadable code!</p>
+      <div class="block-content">
+        <p>
+          void exit(int status);int printf(const char *, ...);int _start()<%exit(!printf("%s",(char [])<%0101,0154,0145,0170,040,0151,0163,040,0143,0157,0157,0154%>));%>
+        </p>
+      </div>
+      <p>
+        To see the hidden message, compile it with this command (on Unix based systems): gcc -nostartfiles -g {filename}.c && ./a.out
+      </p>
+      
+    </div>
+
     <!-- Connect block -->
     <div class="body-container">
       <div class="block-title">
@@ -245,6 +262,7 @@
       </div>
       
     </div>
+
 
   </body>
 </html>
