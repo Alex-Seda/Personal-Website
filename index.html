@@ -31,7 +31,7 @@
         </p>
         <p>
           Outside of formal coursework, I independently designed and deployed a <strong>full-scale real estate website</strong>, including managing DNS 
-          and cloud hosting setups. I have also completed <strong>multiple clean installations of Arch Linux</strong>, handling disk partitioning, EFI boot 
+          and cloud hosting setups. I have also completed <strong>multiple installations of Arch Linux</strong>, handling disk partitioning, EFI boot 
           configuration, and system setup troubleshooting once running. These hands-on experiences, in addition to others, have deepened my understanding of the systems that support the software I build.
         </p>
         <p>
@@ -86,20 +86,45 @@
       </div>
       <div class="block-content">
 
-        <p>The projects below link to their respective GitHub repositories, each labeled with the languages used.</p>
+        <p>The projects below link to their respective GitHub repositories (or live sites, for those with sensitive source code), each labeled with the languages used.</p>
 
         <div class="project-grid">
 
+          <!-- Dad's Campaign Website -->
+          <div class="project-grid-row">
+            <div>
+              Roberto Seda's Campaign Website 
+
+              <!-- Link -->
+              <a href="https://www.sedaforok.com" 
+                  class="project-link" 
+                  target="_blank"
+                  rel="noopener noreferrer">
+                (sedaforok.com)
+              </a>
+            </div>
+
+            <!-- Languages -->
+            <div class="language-list">
+              <div class="language-html">HTML</div>|
+              <div class="language-css">CSS</div>|
+              <div class="language-javaScript">JavaScript</div>
+            </div>
+          </div>
+          
           <!-- This website -->
           <div class="project-grid-row">
 
-            <!-- Link -->
-            <a href="https://github.com/Alex-Seda/Personal-Website" 
-                class="project-link" 
-                target="_blank"
-                rel="noopener noreferrer">
-              Personal Portfolio (This Website)
-            </a>
+            <div>
+              Personal Portfolio
+              <!-- Link -->
+              <a href="https://github.com/Alex-Seda/Personal-Website" 
+                  class="project-link" 
+                  target="_blank"
+                  rel="noopener noreferrer">
+                (This Website)
+              </a>
+            </div>
 
             <!-- Languages -->
             <div class="language-list">
@@ -176,6 +201,105 @@
       </div>
     </div>
 
+    <!-- Fun fact block -->
+    <div class="body-container">
+      <div class="block-title">
+        Fun code!
+      </div>
+      <p>C is a really cool language! There are many coding conventions that are super weird now, but were vital at the time of its release. That, coupled with C standard library functions and understanding how C actually executes allows us to generate this very unreadable, one-line program!</p>
+      <div class="block-content">
+        <p>
+          void exit(int status);int printf(const char *, ...);int _start()<%exit(!printf("%s",(char [])<%0143,040,0151,0163,040,0143,0157,0157,0154%>));%>
+        </p>
+      </div>
+      <p class="block-content">
+        To see the hidden message, compile it with this command (on Unix based systems): gcc -nostartfiles -g {filename}.c && ./a.out
+      </p>
+
+      <details class="block-content">
+        <summary>
+          Click here for an explanation!
+        </summary>
+
+        <div>
+          <p>
+            The above line of code can also be written like this:
+          </p>
+          <pre>
+            void exit(int status);
+            int printf(const char *, ...);
+            
+            int _start(){
+                exit(!print("%s",(char []){'C',' ','i','s',' ','c','o','o','l'));
+            }
+          </pre>
+          <p>
+            Or even simpler, like this:
+          </p>
+          <pre>
+            #include <stdio.h>
+            #include <stdlib.h>
+
+            int maini(){
+                printf("%s","C is cool");
+                exit(0);
+            }
+          </pre>
+          <p>
+            (This technically is not the same program, but it outputs the same thing and uses similar logic)
+          </p>
+          <p>Ugly Code Breakdown:</p>
+          <ul style="display:flex; flex-direction: column; gap: 26px;">
+            <li>"void exit(int status);" is there to prototype the exit function, but you can include stdlib.h instead</li>
+            <li>"int printf(const char *, ...);" is there to prototype the printf function, but you can include stdio.h instead</li>
+            <li>
+              "int _start()" is what the program enters before main. It is normally used to set up memory allocations and 
+              initialize some standard libraries, but for our case, we can override it to preempt the main function call and make 
+              our code less readable! It is also why we need the "-nostartfiles" tag in the compile command, so that gcc does not 
+              try to use the default "_start()" function.
+            </li>
+            <li>
+              Any "<%" or "%>" can be read as "{" or "}". These character patterns are called "digraphs", and they are legacy notation for C 
+              that was implemented in case a computer did not have the curly brace keys (or some other keys). There are also trigraphs for the
+              same purpose! "??<" and ">??" also represent curly braces!
+            </li>
+            <li>
+              "exit(...)" is what exits us from the "_start()" function. We might want to try to make our code shorter by making
+              this a return statement, but in this case we cannot. "_start()" normally calls "main()", so if we return with "main()", we are 
+              going back to the memory address where "main()" was called, in "_start()". Since there is not an outer function calling "_start()", 
+              we must use an exit command because there is no memory location to return to.
+            </li>
+            <li>
+              The "!" is simply there to make sure "exit()" says that the program succeeded. "printf()" returns the number of characters that 
+              it printed, and "exit()" thinks something failed if you input anything other than a 0 or "false". Therefore, putting the "!"
+              operator in front of a non-zero value, gives a "false", making "exit()" report that everything succeeded.
+            </li>
+            <li>
+              The (char []) casts the array that follows it as an array of characters, allowing it to be printed as a string, since that is all
+              a string is in C.
+            </li>
+            <li>
+              Finally, the digits in the array! If you have ever seen jokes about how "010 == '8'" in Javascript, this is actually where that
+              came from! "010 == 8" would return true in C! We are familiar with base 10 numbers being represented as normal numbers in coding, and
+              some languages implement "0x" as the prefix for base 16 numbers (like hexadecimal 0x20 is 32 in base 10). Similarly, C has a prefix for
+              base 8, or octal, but it just happens to be "0", without the "x"! This means that each of those numbers in that array is an octal number
+              that is being cast to characters, which in turn are their ASCII table values!
+            </li>
+          </ul>
+
+          <p>
+            Now, this specific program very obviously does not follow best coding practices, breaks convention, and should not be how we normally code. 
+            However, it is really fun sometimes to do things with code just because you can! And learning the ins and outs through silly
+            coding usually helps you learn a thing or two about your computer.
+          </p>
+          <p>
+            I hope you enjoyed my obnoxious code breakdown! Happy coding!
+          </p>
+        <div>
+      </details>
+      
+    </div>
+
     <!-- Connect block -->
     <div class="body-container">
       <div class="block-title">
@@ -220,6 +344,7 @@
       </div>
       
     </div>
+
 
   </body>
 </html>
